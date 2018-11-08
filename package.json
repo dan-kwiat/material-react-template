@@ -2,6 +2,7 @@
   "name": "material-react-template",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "https://dan-kwiat.github.io/material-react-template",
   "dependencies": {
     "@material/react-drawer": "^0.6.2",
     "@material/react-list": "^0.6.2",
