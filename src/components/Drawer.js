@@ -35,30 +35,47 @@ DrawerList.propTypes = {
   onItemClick: PropTypes.func.isRequired,
 }
 
-const Drawer = ({ isMobile, isOpen, setIsDrawerOpen }) => {
-  return (
+const DeviceAppropriateDrawer = ({ isMobile, isOpen, setIsDrawerOpen, children }) => {
+  return isMobile ? (
     <NavDrawer
-      modal={isMobile}
-      open={isMobile ? isOpen : undefined}
+      modal
+      open={isOpen}
       onOpen={() => setIsDrawerOpen(true)}
       onClose={() => setIsDrawerOpen(false)}
     >
-      <DrawerHeader>
-        <DrawerTitle>
-          Drawer Title
-        </DrawerTitle>
-        <DrawerSubtitle>
-          Drawer Subtitle
-        </DrawerSubtitle>
-      </DrawerHeader>
-      <DrawerContent>
-        <DrawerList
-          onItemClick={() => isMobile && setIsDrawerOpen(false)}
-        />
-      </DrawerContent>
+      {children}
+    </NavDrawer>
+  ) : (
+    <NavDrawer>
+      {children}
     </NavDrawer>
   )
 }
+DeviceAppropriateDrawer.propTypes = {
+  isMobile: PropTypes.bool.isRequired,
+  isOpen: PropTypes.bool.isRequired,
+  setIsDrawerOpen: PropTypes.func.isRequired,
+}
+
+const Drawer = props => (
+  <DeviceAppropriateDrawer {...props}>
+    <DrawerHeader>
+      <DrawerTitle>
+        Drawer Title
+      </DrawerTitle>
+      <DrawerSubtitle>
+        Drawer Subtitle
+      </DrawerSubtitle>
+    </DrawerHeader>
+    <DrawerContent>
+      <DrawerList
+        onItemClick={() => {
+          props.isMobile && props.setIsDrawerOpen(false)
+        }}
+      />
+    </DrawerContent>
+  </DeviceAppropriateDrawer>
+)
 Drawer.propTypes = {
   isMobile: PropTypes.bool.isRequired,
   isOpen: PropTypes.bool.isRequired,
