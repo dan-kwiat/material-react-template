@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react'
+import React, { useState } from 'react'
 import { useIsMobile } from './hooks'
 import Drawer from './components/Drawer'
 import AppBar from './components/AppBar'
