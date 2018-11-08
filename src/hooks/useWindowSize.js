@@ -1,4 +1,7 @@
 import { useState, useEffect, useLayoutEffect } from 'react'
+import throttle from 'lodash.throttle'
+
+const THROTTLE_LIMIT = 300
 
 const getSize = () => {
   return {
@@ -12,9 +15,12 @@ const getSize = () => {
 const useWindowSize = () => {
   const [windowSize, setWindowSize] = useState(getSize())
 
-  const handleResize = () => {
-    setWindowSize(getSize())
-  }
+  const handleResize = throttle(
+    () => {
+      setWindowSize(getSize())
+    },
+    THROTTLE_LIMIT,
+  )
 
   useEffect(() => {
     window.addEventListener('resize', handleResize)

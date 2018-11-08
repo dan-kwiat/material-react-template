@@ -7,6 +7,7 @@
     "@material/react-list": "^0.6.2",
     "@material/react-material-icon": "^0.6.2",
     "@material/react-top-app-bar": "^0.6.2",
+    "lodash.throttle": "^4.1.1",
     "prop-types": "^15.6.2",
     "react": "^16.7.0-alpha.0",
     "react-dom": "^16.7.0-alpha.0",
