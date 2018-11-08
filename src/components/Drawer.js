@@ -73,6 +73,7 @@ const Drawer = props => (
           props.isMobile && props.setIsDrawerOpen(false)
         }}
       />
+      <a href='/'>test link</a>
     </DrawerContent>
   </DeviceAppropriateDrawer>
 )
