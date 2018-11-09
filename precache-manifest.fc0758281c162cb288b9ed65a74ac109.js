@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/material-react-template/static/css/1.1184e97b.chunk.css"
   },
   {
-    "revision": "75e894ac2b90bd4c09ecccd6138e379b",
+    "revision": "c01d15e56fd41517e2414aeaa12e2fc2",
     "url": "/material-react-template/index.html"
   }
 ];
