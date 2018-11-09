@@ -1,7 +1,7 @@
 {
   "main.css": "/material-react-template/static/css/main.b7473c1f.chunk.css",
-  "main.js": "/material-react-template/static/js/main.0d70c05d.chunk.js",
-  "main.js.map": "/material-react-template/static/js/main.0d70c05d.chunk.js.map",
+  "main.js": "/material-react-template/static/js/main.75db3bdb.chunk.js",
+  "main.js.map": "/material-react-template/static/js/main.75db3bdb.chunk.js.map",
   "static/css/1.1184e97b.chunk.css": "/material-react-template/static/css/1.1184e97b.chunk.css",
   "static/js/1.e950b370.chunk.js": "/material-react-template/static/js/1.e950b370.chunk.js",
   "static/js/1.e950b370.chunk.js.map": "/material-react-template/static/js/1.e950b370.chunk.js.map",
@@ -10,6 +10,6 @@
   "static/css/1.1184e97b.chunk.css.map": "/material-react-template/static/css/1.1184e97b.chunk.css.map",
   "static/css/main.b7473c1f.chunk.css.map": "/material-react-template/static/css/main.b7473c1f.chunk.css.map",
   "index.html": "/material-react-template/index.html",
-  "precache-manifest.8b15aa469f1132b28823ab84d566f927.js": "/material-react-template/precache-manifest.8b15aa469f1132b28823ab84d566f927.js",
+  "precache-manifest.d454dc514b4d71ca21aaa96f37239293.js": "/material-react-template/precache-manifest.d454dc514b4d71ca21aaa96f37239293.js",
   "service-worker.js": "/material-react-template/service-worker.js"
 }
