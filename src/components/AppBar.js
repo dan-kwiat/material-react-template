@@ -13,6 +13,7 @@ const renderDrawerIcon = onClick => (
 const AppBar = ({ isMobile, setIsDrawerOpen }) => (
   <TopAppBar
     title='Title'
+    fixed
     navigationIcon={isMobile ? renderDrawerIcon(() => setIsDrawerOpen(true)) : null}
   />
 )
