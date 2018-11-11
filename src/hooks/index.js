@@ -1,7 +1,7 @@
 import useWindowSize from './useWindowSize'
-import useIsMobile from './useIsMobile'
+import useIsDesktop from './useIsDesktop'
 
 export {
   useWindowSize,
-  useIsMobile,
+  useIsDesktop,
 }

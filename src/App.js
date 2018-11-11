@@ -1,27 +1,27 @@
 import React, { useState } from 'react'
-import { useIsMobile } from './hooks'
+import { useIsDesktop } from './hooks'
 import Drawer from './components/Drawer'
 import AppBar from './components/AppBar'
 import { TopAppBarFixedAdjust } from '@material/react-top-app-bar'
 import './App.css'
-import '@material/react-drawer/dist/drawer.css'
-import '@material/react-list/dist/list.css'
-import '@material/react-top-app-bar/dist/top-app-bar.css'
-import '@material/react-material-icon/dist/material-icon.css'
+import '@material/react-drawer/dist/drawer.min.css'
+import '@material/react-list/dist/list.min.css'
+import '@material/react-top-app-bar/dist/top-app-bar.min.css'
+import '@material/react-material-icon/dist/material-icon.min.css'
 
 const AppLayout = () => {
-  const isMobile = useIsMobile()
+  const isDesktop = useIsDesktop()
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
   return (
-    <div className={isMobile ? null : 'desktop-drawer-container'}>
+    <div className={isDesktop ? 'desktop-drawer-container' : null}>
       <Drawer
-        isMobile={isMobile}
+        isDesktop={isDesktop}
         isOpen={isDrawerOpen}
         setIsDrawerOpen={setIsDrawerOpen}
       />
-      <div className={isMobile ? null : 'desktop-drawer-app-content'}>
+      <div className={isDesktop ? 'desktop-drawer-app-content' : null}>
         <AppBar
-          isMobile={isMobile}
+          isDesktop={isDesktop}
           setIsDrawerOpen={setIsDrawerOpen}
         />
         <TopAppBarFixedAdjust>

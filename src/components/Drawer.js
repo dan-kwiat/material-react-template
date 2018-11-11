@@ -35,8 +35,12 @@ DrawerList.propTypes = {
   onItemClick: PropTypes.func.isRequired,
 }
 
-const DeviceAppropriateDrawer = ({ isMobile, isOpen, setIsDrawerOpen, children }) => {
-  return isMobile ? (
+const DeviceAppropriateDrawer = ({ isDesktop, isOpen, setIsDrawerOpen, children }) => {
+  return isDesktop ? (
+    <NavDrawer>
+      {children}
+    </NavDrawer>
+  ) : (
     <NavDrawer
       modal
       open={isOpen}
@@ -45,14 +49,10 @@ const DeviceAppropriateDrawer = ({ isMobile, isOpen, setIsDrawerOpen, children }
     >
       {children}
     </NavDrawer>
-  ) : (
-    <NavDrawer>
-      {children}
-    </NavDrawer>
   )
 }
 DeviceAppropriateDrawer.propTypes = {
-  isMobile: PropTypes.bool.isRequired,
+  isDesktop: PropTypes.bool.isRequired,
   isOpen: PropTypes.bool.isRequired,
   setIsDrawerOpen: PropTypes.func.isRequired,
 }
@@ -70,7 +70,7 @@ const Drawer = props => (
     <DrawerContent>
       <DrawerList
         onItemClick={() => {
-          props.isMobile && props.setIsDrawerOpen(false)
+          !props.isDesktop && props.setIsDrawerOpen(false)
         }}
       />
       <a href='/'>test link</a>
@@ -78,7 +78,7 @@ const Drawer = props => (
   </DeviceAppropriateDrawer>
 )
 Drawer.propTypes = {
-  isMobile: PropTypes.bool.isRequired,
+  isDesktop: PropTypes.bool.isRequired,
   isOpen: PropTypes.bool.isRequired,
   setIsDrawerOpen: PropTypes.func.isRequired,
 }
