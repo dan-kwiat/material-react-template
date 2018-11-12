@@ -17,17 +17,17 @@ import MaterialIcon from '@material/react-material-icon'
 const DrawerList = ({ onItemClick }) => (
   <List>
     <ListItem onClick={onItemClick}>
-      <ListItemGraphic graphic={<MaterialIcon icon='folder'/>} />
-      <ListItemText primaryText='List Item 1' />
+      <ListItemGraphic graphic={<MaterialIcon icon='home'/>} />
+      <ListItemText primaryText='Home' />
+    </ListItem>
+    <ListItem onClick={onItemClick}>
+      <ListItemGraphic graphic={<MaterialIcon icon='search'/>} />
+      <ListItemText primaryText='Search' />
+    </ListItem>
+    <ListItem onClick={onItemClick}>
+      <ListItemGraphic graphic={<MaterialIcon icon='settings'/>} />
+      <ListItemText primaryText='Settings' />
       <ListItemMeta meta='meta info' />
-    </ListItem>
-    <ListItem onClick={onItemClick}>
-      <ListItemGraphic graphic={<MaterialIcon icon='folder'/>} />
-      <ListItemText primaryText='List Item 1' />
-    </ListItem>
-    <ListItem onClick={onItemClick}>
-      <ListItemGraphic graphic={<MaterialIcon icon='folder'/>} />
-      <ListItemText primaryText='List Item 3' />
     </ListItem>
   </List>
 )
