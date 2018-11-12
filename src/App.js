@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useIsDesktop } from './hooks'
-import Drawer from './components/Drawer'
-import AppBar from './components/AppBar'
+import { AppBar, AppContent, Drawer } from './components'
 import { TopAppBarFixedAdjust } from '@material/react-top-app-bar'
 import './App.css'
 import '@material/react-drawer/dist/drawer.min.css'
@@ -25,9 +24,7 @@ const AppLayout = () => {
           setIsDrawerOpen={setIsDrawerOpen}
         />
         <TopAppBarFixedAdjust>
-          <div style={{ textAlign: 'center', fontSize: '1.5em', }}>
-            {[...new Array(100)].map((x, i) => <p key={i}>{i}</p>)}
-          </div>
+          <AppContent />
         </TopAppBarFixedAdjust>
       </div>
     </div>
