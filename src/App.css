@@ -5,16 +5,17 @@ body {
   line-height: 1.5em;
 }
 
-.desktop-drawer-container {
-  display: flex;
-  flex-direction: row;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.desktop-drawer-app-content {
-  flex: auto;
-  overflow: auto;
+@media (min-width: 840px) {
+  .desktop-drawer-container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .desktop-drawer-app-content {
+    flex: auto;
+    overflow: auto;
+  }
 }
 
 .content-container {

@@ -12,13 +12,13 @@ const AppLayout = () => {
   const isDesktop = useIsDesktop()
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
   return (
-    <div className={isDesktop ? 'desktop-drawer-container' : null}>
+    <div className='desktop-drawer-container'>
       <Drawer
         isDesktop={isDesktop}
         isOpen={isDrawerOpen}
         setIsDrawerOpen={setIsDrawerOpen}
       />
-      <div className={isDesktop ? 'desktop-drawer-app-content' : null}>
+      <div className='desktop-drawer-app-content'>
         <AppBar
           isDesktop={isDesktop}
           setIsDrawerOpen={setIsDrawerOpen}
