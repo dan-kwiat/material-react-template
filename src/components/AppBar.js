@@ -10,15 +10,21 @@ const renderDrawerIcon = onClick => (
   />
 )
 
-const AppBar = ({ isDesktop, setIsDrawerOpen }) => (
-  <TopAppBar
-    title='Title'
-    fixed
-    navigationIcon={isDesktop ? null : renderDrawerIcon(() => setIsDrawerOpen(true))}
-  />
+const AppBar = ({ setIsDrawerOpen }) => (
+  <>
+    <TopAppBar
+      className='mobile-appbar'
+      title='Title'
+      navigationIcon={renderDrawerIcon(() => setIsDrawerOpen(true))}
+    />
+    <TopAppBar
+      className='desktop-appbar'
+      title='Title'
+      fixed
+    />
+  </>
 )
 AppBar.propTypes = {
-  isDesktop: PropTypes.bool.isRequired,
   setIsDrawerOpen: PropTypes.func.isRequired,
 }
 

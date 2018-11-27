@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { useIsDesktop } from './hooks'
 import { AppBar, AppContent, Drawer } from './components'
 import { TopAppBarFixedAdjust } from '@material/react-top-app-bar'
 import './App.css'
@@ -9,18 +8,15 @@ import '@material/react-top-app-bar/dist/top-app-bar.min.css'
 import '@material/react-material-icon/dist/material-icon.min.css'
 
 const AppLayout = () => {
-  const isDesktop = useIsDesktop()
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
   return (
     <div className='desktop-drawer-container'>
       <Drawer
-        isDesktop={isDesktop}
         isOpen={isDrawerOpen}
         setIsDrawerOpen={setIsDrawerOpen}
       />
       <div className='desktop-drawer-app-content'>
         <AppBar
-          isDesktop={isDesktop}
           setIsDrawerOpen={setIsDrawerOpen}
         />
         <TopAppBarFixedAdjust>

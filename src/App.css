@@ -16,6 +16,21 @@ body {
     flex: auto;
     overflow: auto;
   }
+  .modal-drawer {
+    display: none !important;
+  }
+  .mobile-appbar {
+    display: none !important;
+  }
+}
+
+@media (max-width: 839px) {
+  .permanent-drawer {
+    display: none !important;
+  }
+  .desktop-appbar {
+    display: none !important;
+  }
 }
 
 .content-container {
