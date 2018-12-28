@@ -1,11 +1,7 @@
 import React, { useState } from 'react'
 import { AppBar, AppContent, Drawer } from './components'
 import { TopAppBarFixedAdjust } from '@material/react-top-app-bar'
-import './App.css'
-import '@material/react-drawer/dist/drawer.min.css'
-import '@material/react-list/dist/list.min.css'
-import '@material/react-top-app-bar/dist/top-app-bar.min.css'
-import '@material/react-material-icon/dist/material-icon.min.css'
+import './App.scss'
 
 const AppLayout = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)

@@ -8,14 +8,15 @@
     "@material/react-list": "^0.7.1",
     "@material/react-material-icon": "^0.7.1",
     "@material/react-top-app-bar": "^0.7.1",
+    "node-sass": "^4.11.0",
     "prop-types": "^15.6.2",
     "react": "^16.7.0-alpha.2",
     "react-dom": "^16.7.0-alpha.2",
     "react-scripts": "2.1.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "export SASS_PATH=./node_modules && react-scripts start",
+    "build": "export SASS_PATH=./node_modules && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "yarn build",
